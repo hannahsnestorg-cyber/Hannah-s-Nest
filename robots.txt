@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hannahsnest.org/sitemap.xml
