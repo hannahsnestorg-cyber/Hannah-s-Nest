@@ -526,6 +526,7 @@ entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); i
 root.querySelectorAll('.rv, .rv-img').forEach((el) => io.observe(el));
 root.classList.add('ih-js');
 this._io = io;
+try { const seen = new WeakSet(); const scan = () => { root.querySelectorAll('.rv:not(.in), .rv-img:not(.in)').forEach((el) => { if (!seen.has(el)) { seen.add(el); io.observe(el); } }); }; scan(); this._mo = new MutationObserver(scan); this._mo.observe(root, { childList: true, subtree: true }); } catch (eM) {}
 } catch (err) {}
 }
 weekCount() {
@@ -694,6 +695,7 @@ try { if (this._liveSb && this._liveCh) { this._liveSb.removeChannel(this._liveC
 this.calmStop(); if (this._calmVis) { document.removeEventListener('visibilitychange', this._calmVis); }
 if (this._timer) clearInterval(this._timer);
 if (this._io) this._io.disconnect();
+if (this._mo) this._mo.disconnect();
 }
 renderVals() {
 const list = [
