@@ -1,0 +1,16 @@
+{
+  "updated": "2026-11",
+  "note": "Fresh content for hannahsnest.org. Items here are ADDED to what is built into each page. jar: [id, category (joy|peace|grow|together|faith), time label, title, how, why]. promises: {ref, q}. cards: {ref, q, say, do, pray}. home and nest: short scroller phrases.",
+  "jar": [
+    ["picnic", "together", "AN AFTERNOON", "Have a small picnic for two", "Pack puff-puff, fruit and a cold drink, and find a quiet spot outside, even your own balcony. Phones away for one hour.", "Why it helps: simple, unhurried time together reminds you that you are a family already."],
+    ["playlist", "joy", "20 MINUTES", "Make a 'good days' playlist", "Pick 10 songs that make you smile, old-school, Afrobeats or worship. Play it whenever the day feels heavy.", "Why it helps: music you love is a quick way back to yourself."],
+    ["gratitude3", "faith", "5 MINUTES A DAY", "Three thank-yous before bed", "Each night this week, write or say three things you are thankful for today, however small.", "Why it helps: gratitude gently trains your eyes to notice the good God is still doing."],
+    ["declutter", "peace", "30 MINUTES", "Clear one small corner", "Choose one drawer, shelf or bag and clear it out. Give away what you don’t need.", "Why it helps: a little order on the outside often brings a little calm on the inside."],
+    ["learnsong", "grow", "15 MINUTES A DAY", "Learn a new hymn or song", "Pick a hymn or song you’ve always liked and learn all the words this week. Sing it in the shower.", "Why it helps: learning something new gives your mind a gentle place to rest."],
+    ["checkin", "together", "10 MINUTES", "Check on a friend who checks on you", "Send a voice note to the friend who always asks how you are. This time, ask about her.", "Why it helps: giving care, not only receiving it, fills your heart too."]
+  ],
+  "promises": [],
+  "cards": [],
+  "home": [],
+  "nest": []
+}
