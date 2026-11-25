@@ -137,6 +137,67 @@ aside[aria-label="Your word for today"]{animation:none !important}
 
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important;scroll-behavior:auto!important}}
 @media (max-width: 700px){nav a{padding-top:10px;padding-bottom:10px}}
+
+.hn-nav{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600}
+.hn-links{display:flex;align-items:center;gap:2px}
+.hn-link{padding:10px 13px;border-radius:999px;color:#3a2a22;text-decoration:none}
+.hn-link:hover{background:#f3e8dc;color:#8f4a33}
+.hn-link.is-on{color:#8f4a33;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
+.hn-nav-end{display:inline-flex;align-items:center;gap:10px;margin-left:8px}
+.hn-calm{position:relative!important;left:auto!important;bottom:auto!important;width:44px;height:44px;min-height:44px!important;padding:0!important;justify-content:center;box-shadow:none!important}
+.hn-calm>span{display:none}
+.hn-menu{display:none}
+.hn-menu>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 14px;border-radius:999px;border:1.5px solid #d49a7c;background:#f3e8dc;color:#8f4a33;font-weight:700;font-size:14px}
+.hn-menu>summary::-webkit-details-marker{display:none}
+.hn-sheet{position:absolute;left:0;right:0;top:100%;z-index:80;background:#fbf6ef;border-bottom:1px solid #e8dacb;box-shadow:0 22px 40px rgba(58,42,34,.16);padding:8px 16px 18px;display:flex;flex-direction:column;animation:hn-sheet-in .2s ease-out}
+@keyframes hn-sheet-in{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.hn-sheet-link{display:block;padding:15px 8px;border-bottom:1px solid #efe3d6;font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:500;color:#3a2a22;text-decoration:none}
+.hn-sheet-link.is-on{color:#8f4a33}
+.hn-sheet-calm{margin-top:14px;align-self:flex-start;border:1.5px solid #d49a7c;background:#f3e8dc;color:#8f4a33;border-radius:999px;padding:11px 18px;font:inherit;font-size:15px;font-weight:700;cursor:pointer}
+.hn-help-btn{min-height:48px!important;padding:10px 16px 10px 12px!important;font-size:14px!important;opacity:0;pointer-events:none;transform:translateY(14px);transition:opacity .25s,transform .25s}
+html.hn-scrolled:not(.hn-nearend) .hn-help-btn,.hn-help-btn[aria-expanded="true"]{opacity:1;pointer-events:auto;transform:none}
+header>div{position:relative}
+@media (max-width: 1040px){.hn-links{display:none}.hn-menu{display:block}}
+@media (max-width: 520px){
+ header>div{padding:12px 16px!important;flex-wrap:nowrap!important}
+ header>div>a img{height:42px!important}
+ .hn-nav-end{gap:8px;margin-left:0}
+ .hn-nav-end .hn-calm{display:none!important}
+ .hn-nav-end .ih-btn{padding:10px 16px!important;font-size:14px;white-space:nowrap}
+ .hn-menu>summary span{display:none}
+ .hn-menu>summary{padding:0 11px}
+ .hn-help-btn>span{display:none}.hn-help-btn{padding:12px!important}
+}
+
+.hn-foot{flex:1 1 420px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 24px;font-size:15px}
+.hn-foot>div{display:flex;flex-direction:column;gap:9px}
+.hn-foot-h{margin:0 0 2px;font-size:12px;letter-spacing:.18em;font-weight:700;color:#d49a7c;text-transform:uppercase}
+.hn-foot a{color:#fbf6ef;text-decoration:none}
+.hn-foot a:hover{text-decoration:underline}
+@media (max-width:600px){.hn-foot{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.hn-wrap{max-width:1120px;margin:0 auto}
+.hn-who{background:#f3e8dc;padding:88px 24px}
+.hn-taste{background:#fbf6ef;padding:88px 24px}
+.hn-kick{margin:0 0 12px;font-size:13px;line-height:16px;letter-spacing:.2em;font-weight:700;color:#7a5a2a}
+.hn-h2{margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(34px,4.4vw,52px);line-height:1.05;color:#8f4a33}
+.hn-h2 span{font-style:italic;color:#5f7a5c}
+.hn-lead{margin:16px 0 0;max-width:640px;font-size:18px;line-height:29px;color:#3a2a22}
+.hn-grid{margin-top:34px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.hn-grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.hn-card{background:#fbf6ef;border:1px solid #e8dacb;border-radius:18px;padding:20px 20px 18px}
+.hn-taste .hn-card{background:#f3e8dc;border-color:#ead7c3}
+.hn-card h3{margin:0 0 6px;font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:24px;line-height:1.15;color:#8f4a33}
+.hn-card p{margin:0;font-size:15px;line-height:23px;color:#3a2a22}
+.hn-card-link{display:flex;flex-direction:column;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.hn-card-link:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(58,42,34,.12)}
+.hn-card-kick{margin:0 0 8px!important;font-size:12px!important;letter-spacing:.18em;font-weight:700;color:#7a5a2a!important}
+.hn-go{margin-top:14px;font-weight:700;font-size:15px;color:#8f4a33}
+.hn-tabs{display:flex;justify-content:center;gap:8px;padding:18px 16px 0;background:#fbf6ef}
+.hn-tab{padding:11px 22px;border-radius:999px;border:1.5px solid #d49a7c;color:#8f4a33;text-decoration:none;font-weight:700;font-size:15px;background:#fbf6ef}
+.hn-tab.is-on{background:#8f4a33;color:#fbf6ef;border-color:#8f4a33}
+.hn-faith{background:#f3e8dc;padding:72px 24px}
+@media (max-width:600px){.hn-who,.hn-taste{padding:64px 18px}.hn-grid{grid-template-columns:1fr}}
 </style>
 </helmet>
 <div data-ih-root="1" style="width: 100%; height: 100vh; height: 100dvh; overflow-y: auto; overflow-x: hidden; scroll-behavior: smooth; overscroll-behavior: contain; background: #fbf6ef; color: #3a2a22; font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 17px; line-height: 28px;">
@@ -150,25 +211,17 @@ aside[aria-label="Your word for today"]{animation:none !important}
 <p style="margin: 6px 0 0; font-size: 14px;">Still need a person? <a href="https://wa.me/2348065114503?text=Hello%20Hannah%E2%80%99s%20Nest%2C%20I%20have%20a%20question." target="_blank" rel="noopener" style="color: #8f4a33; font-weight: 700;">Message a host</a></p>
 <p style="margin: 0; font-size: 12.5px; line-height: 18px; color: #6a5a4e;">Our helper gives general answers only, never medical advice.</p>
 </div></div></sc-if>
-<button type="button" class="hn-calm" onClick="{{ calmToggle }}" aria-pressed="{{ calmPressed }}" aria-label="{{ calmLabel }}" title="{{ calmLabel }}" style="{{ calmStyle }}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" style="flex-shrink: 0;"><path d="M4 10v4h3l4 4V6L7 10H4z" fill="currentColor"></path><path d="{{ calmWave }}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg><span style="font-size: 14px; font-weight: 700;">{{ calmText }}</span></button>
+
 
 <!-- Top note -->
-<div style="background: #8f4a33; color: #fbf6ef; text-align: center; padding: 10px 16px; font-size: 14px; line-height: 20px; letter-spacing: 0.02em;">Free to join · Private by design · Nicknames welcome</div>
-<sc-if value="{{ tickShow }}" hint-placeholder-val="{{ false }}"><div class="hn-tick" style="position: relative; background: #3a2a22; color: #fbf6ef; overflow: hidden; white-space: nowrap; font-size: 14px; line-height: 20px; padding: 9px 0;"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;">{{ tickSummary }}</span><div class="hn-tick-track" aria-hidden="true" style="{{ tickTrackStyle }}"><sc-for list="{{ tick }}" as="t" hint-placeholder-count="8"><span style="display: inline-flex; align-items: center; gap: 7px; margin: 0 26px;"><b style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; line-height: 20px; color: #f0c9a8;">{{ t.n }}</b><span>{{ t.label }}</span><span aria-hidden="true" style="color: #d49a7c; margin-left: 26px;">✦</span></span></sc-for></div><button type="button" onClick="{{ tickToggle }}" aria-label="{{ tickBtnLabel }}" style="position: absolute; right: 0; top: 0; bottom: 0; border: 0; background: #3a2a22; color: #f0c9a8; font: inherit; font-size: 12px; font-weight: 700; padding: 0 14px; cursor: pointer; box-shadow: -14px 0 14px #3a2a22;">{{ tickBtn }}</button></div></sc-if>
+<sc-if value="{{ noTick }}" hint-placeholder-val="{{ true }}"><div style="background: #8f4a33; color: #fbf6ef; text-align: center; padding: 10px 16px; font-size: 14px; line-height: 20px; letter-spacing: 0.02em;">Free to join · Private by design · Nicknames welcome</div></sc-if>
+<sc-if value="{{ tickShow }}" hint-placeholder-val="{{ false }}"><div class="hn-tick" style="position: relative; background: #8f4a33; color: #fbf6ef; overflow: hidden; white-space: nowrap; font-size: 14px; line-height: 20px; padding: 9px 0;"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;">{{ tickSummary }}</span><div class="hn-tick-track" aria-hidden="true" style="{{ tickTrackStyle }}"><sc-for list="{{ tick }}" as="t" hint-placeholder-count="8"><span style="display: inline-flex; align-items: center; gap: 7px; margin: 0 26px;"><b style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; line-height: 20px; color: #fbe3cf;">{{ t.n }}</b><span>{{ t.label }}</span><span aria-hidden="true" style="color: #d49a7c; margin-left: 26px;">✦</span></span></sc-for></div><button type="button" onClick="{{ tickToggle }}" aria-label="{{ tickBtnLabel }}" style="position: absolute; right: 0; top: 0; bottom: 0; border: 0; background: #8f4a33; color: #fbe3cf; font: inherit; font-size: 12px; font-weight: 700; padding: 0 14px; cursor: pointer; box-shadow: -14px 0 14px #8f4a33;">{{ tickBtn }}</button></div></sc-if>
 
 <!-- Header -->
 <header style="background: #fbf6ef; border-bottom: 1px solid #e8dacb;">
 <div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
 <a href="index.html" aria-label="Hannah’s Nest home" style="display: flex; align-items: center;"><img src="/img/ef040b834e6bfcfebbb2eb36d998f9dd.svg" alt="Hannah’s Nest" style="height: 54px; width: auto; display: block;"></a>
-<nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 22px; font-size: 15px; font-weight: 500;">
-<a href="index.html" aria-current="page" style="color: #8f4a33; font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px;">Home</a>
-<a href="nest.html" style="color: #3a2a22; text-decoration: none;">The Nest</a>
-<a href="daily.html" style="color: #3a2a22; text-decoration: none;">Daily</a>
-<a href="pray.html" style="color: #3a2a22; text-decoration: none;">Live Fully</a>
-<a href="learn.html" style="color: #3a2a22; text-decoration: none;">Learn</a>
-<a href="well.html" style="display: inline-flex; align-items: center; gap: 8px; background: #f3e8dc; color: #8f4a33; text-decoration: none; padding: 11px 18px; border-radius: 999px; border: 1.5px solid #d49a7c; font-weight: 700;"><svg aria-hidden="true" width="14" height="18" viewBox="0 0 14 18" fill="none"><path d="M7 1C7 1 1 8 1 11.5A6 6 0 0 0 13 11.5C13 8 7 1 7 1Z" stroke="#8f4a33" stroke-width="1.8" stroke-linejoin="round"/></svg>The Well</a>
-<a onClick="{{ jumpTo }}" href="#join" class="ih-btn" style="background: #8f4a33; color: #fbf6ef; text-decoration: none; padding: 12px 24px; border-radius: 999px; font-weight: 600;">Come inside</a>
-</nav>
+<nav aria-label="Main" class="hn-nav"><div class="hn-links"><a href="index.html" class="hn-link is-on" aria-current="page">Home</a><a href="nest.html" class="hn-link">The Nest</a><a href="daily.html" class="hn-link">Daily</a><a href="well.html" class="hn-link">The Well</a><a href="pray.html" class="hn-link">Live Fully</a><a href="learn.html" class="hn-link">Learn</a></div><span class="hn-nav-end"><button type="button" class="hn-calm" onClick="{{ calmToggle }}" aria-pressed="{{ calmPressed }}" aria-label="{{ calmLabel }}" title="{{ calmLabel }}" style="{{ calmStyle }}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" style="flex-shrink: 0;"><path d="M4 10v4h3l4 4V6L7 10H4z" fill="currentColor"></path><path d="{{ calmWave }}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg><span style="font-size: 14px; font-weight: 700;">{{ calmText }}</span></button><a onClick="{{ jumpTo }}" href="#join" class="ih-btn" style="background: #8f4a33; color: #fbf6ef; text-decoration: none; padding: 12px 24px; border-radius: 999px; font-weight: 600;">Come inside</a><details class="hn-menu"><summary aria-label="Menu"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Menu</span></summary><div class="hn-sheet"><a href="index.html" class="hn-sheet-link is-on" aria-current="page">Home</a><a href="nest.html" class="hn-sheet-link">The Nest</a><a href="daily.html" class="hn-sheet-link">Daily</a><a href="well.html" class="hn-sheet-link">The Well</a><a href="pray.html" class="hn-sheet-link">Live Fully</a><a href="learn.html" class="hn-sheet-link">Learn</a><button type="button" class="hn-sheet-calm" onClick="{{ calmToggle }}" aria-pressed="{{ calmPressed }}">{{ calmLabel }}</button></div></details></span></nav>
 </div>
 </header>
 
@@ -242,63 +295,18 @@ aside[aria-label="Your word for today"]{animation:none !important}
 </div>
 </section>
 
-<!-- How are you, really? -->
-<section id="howareyou" aria-labelledby="hay-title" style="padding: 72px 24px 80px; background: #fbf6ef;">
-<div class="rv" style="max-width: 900px; margin: 0 auto; text-align: center;">
-<div style="margin: 0 auto 10px;"><svg aria-hidden="true" class="ih-blossom " width="120" height="120" viewBox="-70 -70 140 140" style="display: block; margin: 0 auto; overflow: visible;"><g class="bl-spin"><g transform="rotate(0)"><path class="bl-p bl-o" style="animation-delay:0.15s" d="M0 -6C-15 -20 -16 -46 0 -62C16 -46 15 -20 0 -6z" fill="#e0b48f"></path></g><g transform="rotate(45)"><path class="bl-p bl-o" style="animation-delay:0.22s" d="M0 -6C-15 -20 -16 -46 0 -62C16 -46 15 -20 0 -6z" fill="#d49a7c"></path></g><g transform="rotate(90)"><path class="bl-p bl-o" style="animation-delay:0.29s" d="M0 -6C-15 -20 -16 -46 0 -62C16 -46 15 -20 0 -6z" fill="#e0b48f"></path></g><g transform="rotate(135)"><path class="bl-p bl-o" style="animation-delay:0.36s" d="M0 -6C-15 -20 -16 -46 0 -62C16 -46 15 -20 0 -6z" fill="#d49a7c"></path></g><g transform="rotate(180)"><path class="bl-p bl-o" style="animation-delay:0.43s" d="M0 -6C-15 -20 -16 -46 0 -62C16 -46 15 -20 0 -6z" fill="#e0b48f"></path></g><g transform="rotate(225)"><path class="bl-p bl-o" style="animation-delay:0.50s" d="M0 -6C-15 -20 -16 -46 0 -62C16 -46 15 -20 0 -6z" fill="#d49a7c"></path></g><g transform="rotate(270)"><path class="bl-p bl-o" style="animation-delay:0.57s" d="M0 -6C-15 -20 -16 -46 0 -62C16 -46 15 -20 0 -6z" fill="#e0b48f"></path></g><g transform="rotate(315)"><path class="bl-p bl-o" style="animation-delay:0.64s" d="M0 -6C-15 -20 -16 -46 0 -62C16 -46 15 -20 0 -6z" fill="#d49a7c"></path></g><g transform="rotate(22)"><path class="bl-p bl-i" style="animation-delay:0.75s" d="M0 -4C-10 -14 -11 -32 0 -42C11 -32 10 -14 0 -4z" fill="#b5654a"></path></g><g transform="rotate(94)"><path class="bl-p bl-i" style="animation-delay:0.83s" d="M0 -4C-10 -14 -11 -32 0 -42C11 -32 10 -14 0 -4z" fill="#b5654a"></path></g><g transform="rotate(166)"><path class="bl-p bl-i" style="animation-delay:0.91s" d="M0 -4C-10 -14 -11 -32 0 -42C11 -32 10 -14 0 -4z" fill="#b5654a"></path></g><g transform="rotate(238)"><path class="bl-p bl-i" style="animation-delay:0.99s" d="M0 -4C-10 -14 -11 -32 0 -42C11 -32 10 -14 0 -4z" fill="#b5654a"></path></g><g transform="rotate(310)"><path class="bl-p bl-i" style="animation-delay:1.07s" d="M0 -4C-10 -14 -11 -32 0 -42C11 -32 10 -14 0 -4z" fill="#b5654a"></path></g><circle class="bl-c" cx="0" cy="0" r="11" fill="#8f4a33"></circle><circle class="bl-c" cx="0" cy="0" r="5" fill="#ead7c3"></circle></g></svg></div>
-<p style="margin: 0 0 12px; font-size: 13px; line-height: 16px; letter-spacing: 0.2em; font-weight: 700; color: #7a5a2a;">BEFORE ANYTHING ELSE</p>
-<h2 id="hay-title" style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(44px, 6vw, 72px); line-height: 1; color: #8f4a33;">How are you, <span style="font-style: italic; color: #5f7a5c;">really?</span></h2>
-<p style="margin: 16px auto 0; max-width: 560px; font-size: 18px; line-height: 28px; color: #3a2a22;">Tap the one closest to your heart today. Only you will see it.</p>
-<div role="group" aria-label="How are you feeling today" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 28px;">
-<sc-for list="{{ moods }}" as="m" hint-placeholder-count="6">
-<button type="button" onClick="{{ m.pick }}" aria-pressed="{{ m.pressed }}" class="ih-lift" style="{{ m.style }}">{{ m.label }}</button>
-</sc-for>
-</div>
-<sc-if value="{{ moodPicked }}" hint-placeholder-val="{{ false }}">
-<div role="status" style="margin: 30px auto 0; max-width: 700px; background: #f3e8dc; border-radius: 28px; padding: 30px 30px 32px; animation: ih-up .7s ease-out both;">
-<div style="display: flex; justify-content: center; margin: -4px 0 12px;"><svg aria-hidden="true" class="ih-blossom bl-now" width="64" height="64" viewBox="-70 -70 140 140" style="display: block; overflow: visible;"><g class="bl-spin"><g transform="rotate(0)"><path class="bl-p bl-o" style="animation-delay:0.15s" d="M0 -6C-15 -20 -16 -46 0 -62C16 -46 15 -20 0 -6z" fill="#e0b48f"></path></g><g transform="rotate(45)"><path class="bl-p bl-o" style="animation-delay:0.22s" d="M0 -6C-15 -20 -16 -46 0 -62C16 -46 15 -20 0 -6z" fill="#d49a7c"></path></g><g transform="rotate(90)"><path class="bl-p bl-o" style="animation-delay:0.29s" d="M0 -6C-15 -20 -16 -46 0 -62C16 -46 15 -20 0 -6z" fill="#e0b48f"></path></g><g transform="rotate(135)"><path class="bl-p bl-o" style="animation-delay:0.36s" d="M0 -6C-15 -20 -16 -46 0 -62C16 -46 15 -20 0 -6z" fill="#d49a7c"></path></g><g transform="rotate(180)"><path class="bl-p bl-o" style="animation-delay:0.43s" d="M0 -6C-15 -20 -16 -46 0 -62C16 -46 15 -20 0 -6z" fill="#e0b48f"></path></g><g transform="rotate(225)"><path class="bl-p bl-o" style="animation-delay:0.50s" d="M0 -6C-15 -20 -16 -46 0 -62C16 -46 15 -20 0 -6z" fill="#d49a7c"></path></g><g transform="rotate(270)"><path class="bl-p bl-o" style="animation-delay:0.57s" d="M0 -6C-15 -20 -16 -46 0 -62C16 -46 15 -20 0 -6z" fill="#e0b48f"></path></g><g transform="rotate(315)"><path class="bl-p bl-o" style="animation-delay:0.64s" d="M0 -6C-15 -20 -16 -46 0 -62C16 -46 15 -20 0 -6z" fill="#d49a7c"></path></g><g transform="rotate(22)"><path class="bl-p bl-i" style="animation-delay:0.75s" d="M0 -4C-10 -14 -11 -32 0 -42C11 -32 10 -14 0 -4z" fill="#b5654a"></path></g><g transform="rotate(94)"><path class="bl-p bl-i" style="animation-delay:0.83s" d="M0 -4C-10 -14 -11 -32 0 -42C11 -32 10 -14 0 -4z" fill="#b5654a"></path></g><g transform="rotate(166)"><path class="bl-p bl-i" style="animation-delay:0.91s" d="M0 -4C-10 -14 -11 -32 0 -42C11 -32 10 -14 0 -4z" fill="#b5654a"></path></g><g transform="rotate(238)"><path class="bl-p bl-i" style="animation-delay:0.99s" d="M0 -4C-10 -14 -11 -32 0 -42C11 -32 10 -14 0 -4z" fill="#b5654a"></path></g><g transform="rotate(310)"><path class="bl-p bl-i" style="animation-delay:1.07s" d="M0 -4C-10 -14 -11 -32 0 -42C11 -32 10 -14 0 -4z" fill="#b5654a"></path></g><circle class="bl-c" cx="0" cy="0" r="11" fill="#8f4a33"></circle><circle class="bl-c" cx="0" cy="0" r="5" fill="#ead7c3"></circle></g></svg></div>
-<p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 30px; line-height: 36px; color: #8f4a33;">{{ moodReply.msg }}</p>
-<p style="margin: 16px 0 0; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 22px; line-height: 30px; color: #3a2a22;">“{{ moodReply.verse }}”</p>
-<p style="margin: 6px 0 0; font-size: 12px; line-height: 16px; letter-spacing: 0.18em; font-weight: 700; color: #7a5a2a; text-transform: uppercase;">{{ moodReply.ref }}</p>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 22px;">
-<a onClick="{{ go.checkin }}" href="daily.html" class="ih-btn" style="background: #8f4a33; color: #fbf6ef; text-decoration: none; padding: 14px 24px; border-radius: 999px; font-weight: 700; font-size: 15px;">Do my two-minute check-in</a>
-<sc-if value="{{ moodReply.reach }}" hint-placeholder-val="{{ false }}"><a onClick="{{ go.heavy }}" href="pray.html" class="ih-btn" style="background: transparent; border: 1.5px solid #8f4a33; color: #8f4a33; text-decoration: none; padding: 12.5px 22px; border-radius: 999px; font-weight: 700; font-size: 15px;">Heavy-day support</a></sc-if>
-<sc-if value="{{ moodReply.reach }}" hint-placeholder-val="{{ false }}"><a onClick="{{ tabGo.circle }}" href="#inside" class="ih-btn" style="background: #5f7a5c; color: #fbf6ef; text-decoration: none; padding: 14px 24px; border-radius: 999px; font-weight: 700; font-size: 15px;">Talk to a Sister</a></sc-if>
-</div>
-</div>
-</sc-if>
-</div>
-</section>
+<!-- Who the Nest is for -->
+<section id="who" aria-labelledby="who-title" class="hn-who"><div class="hn-wrap">
+<p class="hn-kick">WHO THE NEST IS FOR</p>
+<h2 id="who-title" class="hn-h2">A place for every <span>kind of waiting.</span></h2>
+<p class="hn-lead">Hannah’s Nest is for women in Nigeria and the diaspora who are trying to conceive, living with infertility, or carrying loss.</p>
+<div class="hn-grid"><div class="hn-card"><h3>Trying to conceive (TTC)</h3><p>You’ve started trying for a baby and want company on the journey, however long it has been.</p></div><div class="hn-card"><h3>Primary infertility</h3><p>You’ve been trying for 12 months or more and haven’t yet had a pregnancy.</p></div><div class="hn-card"><h3>Secondary infertility</h3><p>You’ve been pregnant before, with or without a child today, and it’s now hard to conceive again.</p></div><div class="hn-card"><h3>Pregnancy loss</h3><p>You’ve lost a pregnancy and are carrying that grief, gently, while you hope again.</p></div></div>
+</div></section>
 
 <!-- Marquee -->
 <div aria-hidden="true" style="background: #6e3a28; overflow: hidden; padding: 20px 0;">
 <div class="ih-track" style="display: flex; width: max-content; gap: 44px; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 30px; line-height: 36px; color: #ead7c3; white-space: nowrap;"><sc-for list="{{ mq }}" as="m" hint-placeholder-count="16"><span>{{ m.t }}</span><span style="color: #d49a7c;">✦</span></sc-for></div>
 </div>
-
-<!-- Is this you -->
-<section id="you" style="padding: 80px 24px; background: #f3e8dc;">
-<div style="max-width: 1240px; margin: 0 auto;">
-<div class="rv" style="text-align: center; max-width: 760px; margin: 0 auto;">
-<p style="margin: 0 0 14px; font-size: 13px; line-height: 16px; letter-spacing: 0.2em; font-weight: 700; color: #7a5a2a;">IS THIS YOU?</p>
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(40px, 5vw, 64px); line-height: 1.02; color: #8f4a33;">Tap the one that sounds like <span style="font-style: italic; color: #5f7a5c;">your life</span> right now.</h2>
-</div>
-<div class="rv" style="display: flex; flex-wrap: wrap; gap: 32px; margin-top: 52px; align-items: stretch;">
-<div style="flex: 999 1 560px; min-width: 0; display: flex; flex-wrap: wrap; gap: 14px; align-content: flex-start;">
-<sc-for list="{{ feelings }}" as="f" hint-placeholder-count="6">
-<button type="button" class="ih-lift" onClick="{{ f.pick }}" aria-pressed="{{ f.pressed }}" style="{{ f.tileStyle }}">{{ f.line }}</button>
-</sc-for>
-<sc-if value="{{ feelHasMore }}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{ feelToggle }}" style="cursor: pointer; padding: 14px 24px; border-radius: 999px; border: 1.5px solid #8f4a33; background: transparent; color: #8f4a33; font-weight: 700; font-size: 15px;">{{ feelMoreLabel }}</button></sc-if>
-</div>
-<div style="flex: 1 1 340px; background: #6e3a28; color: #fbf6ef; border-radius: 28px; padding: 42px 38px; display: flex; flex-direction: column; gap: 18px; position: relative; overflow: hidden;">
-<div aria-hidden="true" class="ih-float1" style="position: absolute; right: -50px; top: -50px; width: 170px; height: 170px; border-radius: 999px; background: #d49a7c; opacity: .5;"></div>
-<p style="margin: 0; font-size: 13px; line-height: 16px; letter-spacing: 0.2em; font-weight: 700; color: #ead7c3; position: relative; display: flex; align-items: center; gap: 10px;"><svg aria-hidden="true" class="ih-heart" width="18" height="18" viewBox="0 0 24 24"><path d="M12 21C7 18 4 14 4 9.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 14 17 18 12 21z" fill="#ead7c3"></path></svg>WE SEE YOU</p>
-<p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 32px; line-height: 38px; position: relative;">{{ chosen.reply }}</p>
-<p style="margin: 0; color: #ead7c3; position: relative;">{{ chosen.room }}</p>
-<a onClick="{{ jumpTo }}" href="#join" class="ih-btn" style="margin-top: auto; align-self: flex-start; background: #ead7c3; color: #3a2a22; text-decoration: none; padding: 14px 26px; border-radius: 999px; font-weight: 700; position: relative;">There's a seat for you</a>
-</div>
-</div>
-</div>
-</section>
 
 <!-- Steps -->
 <section style="padding: 0 24px 112px;">
@@ -320,6 +328,17 @@ aside[aria-label="Your word for today"]{animation:none !important}
 </div>
 </div>
 </section>
+
+<!-- A taste of the Nest -->
+<section id="taste" aria-labelledby="taste-title" class="hn-taste"><div class="hn-wrap">
+<p class="hn-kick">WHILE YOU’RE HERE</p>
+<h2 id="taste-title" class="hn-h2">Something for <span>today.</span></h2>
+<div class="hn-grid hn-grid-3">
+<a class="hn-card hn-card-link" href="daily.html"><p class="hn-card-kick">DAILY</p><h3>Your two-minute check-in</h3><p>A word, a verse and a gentle look at how you feel. Kept on your phone.</p><span class="hn-go">Check in →</span></a>
+<a class="hn-card hn-card-link" href="well.html"><p class="hn-card-kick">THE WELL</p><h3>Bible plans for the wait</h3><p>Thirty gentle days for the waiting season, heavy days, loss and joy.</p><span class="hn-go">Start reading →</span></a>
+<a class="hn-card hn-card-link" href="learn.html"><p class="hn-card-kick">LEARN</p><h3>Fertility facts, plainly</h3><p>Your cycle, tests, PCOS, fibroids, IVF and an IVF cost planner.</p><span class="hn-go">Start learning →</span></a>
+</div>
+</div></section>
 
 <!-- Leave a Petal -->
 <section style="padding: 0 24px 112px;">
@@ -375,19 +394,10 @@ aside[aria-label="Your word for today"]{animation:none !important}
 <footer style="background: #3a2a22; color: #fbf6ef;">
 <div style="max-width: 1240px; margin: 0 auto; padding: 48px 24px 28px; display: flex; flex-wrap: wrap; gap: 28px 48px; justify-content: space-between; align-items: flex-start;">
 <div style="flex: 1 1 260px; display: flex; align-items: center; gap: 14px;"><img src="/img/bae077bc1998ed64b2dfd52d6799b8aa.svg" alt="" style="width: 52px; height: 52px; border-radius: 12px; display: block;"><div><p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 30px; line-height: 1; font-weight: 600;">Hannah’s Nest</p><p style="margin: 6px 0 0; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 18px; line-height: 22px; color: #ead7c3;">“For this child I prayed.” 1 Samuel 1:27</p></div></div>
-<nav aria-label="Footer" style="flex: 1 1 300px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 24px; font-size: 15px;">
-<a onClick="{{ jumpTo }}" href="#top" style="color: #fbf6ef; text-decoration: none;">Home</a>
-<a onClick="{{ go.inside }}" href="nest.html" style="color: #fbf6ef; text-decoration: none;">The Nest</a>
-<a onClick="{{ go.checkin }}" href="daily.html" style="color: #fbf6ef; text-decoration: none;">Daily check-in</a>
-<a href="journal.html" style="color: #fbf6ef; text-decoration: none;">My journal</a>
-<a onClick="{{ go.pray }}" href="pray.html" style="color: #fbf6ef; text-decoration: none;">Live Fully</a>
-<a href="well.html" style="color: #fbf6ef; text-decoration: none;">The Well</a>
-<a href="https://tally.so/r/rDO4Vo" target="_blank" rel="noopener" style="color: #ead7c3; text-decoration: none; font-weight: 700;">🌸 Leave a Petal</a>
-<a onClick="{{ go.learn }}" href="learn.html" style="color: #fbf6ef; text-decoration: none;">Learn</a>
-<a onClick="{{ go.heavy }}" href="pray.html" style="color: #fbf6ef; text-decoration: none;">Heavy-day support</a>
-<a href="/privacy" style="color: #fbf6ef; text-decoration: none;">Privacy</a>
-<a href="/membership-terms" style="color: #fbf6ef; text-decoration: none;">Membership terms</a>
-<a onClick="{{ jumpTo }}" href="#join" style="color: #fbf6ef; text-decoration: none;">Come inside</a>
+<nav aria-label="Footer" class="hn-foot">
+<div><p class="hn-foot-h">Explore</p><a href="index.html">Home</a><a href="nest.html">The Nest</a><a href="daily.html">Daily</a><a href="well.html">The Well</a><a href="pray.html">Live Fully</a><a href="learn.html">Learn</a></div>
+<div><p class="hn-foot-h">Support</p><a href="learn.html#ask">Ask or request prayer</a><a href="pray.html#heavy">Heavy-day support</a><a href="https://tally.so/r/rDO4Vo" target="_blank" rel="noopener">🌸 Leave a Petal</a></div>
+<div><p class="hn-foot-h">About</p><a href="index.html#join">Come inside</a><a href="/privacy">Privacy</a><a href="/membership-terms">Membership terms</a></div>
 </nav>
 <div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 8px; font-size: 15px;"><p style="margin: 0; color: #d49a7c; font-size: 13px; letter-spacing: 0.2em; font-weight: 700;">FIND US &amp; FOLLOW US</p><p style="margin: 0;"><a href="https://wa.me/2348065114503?text=Hello%20Hannah%E2%80%99s%20Nest%2C%20I%E2%80%99d%20like%20to%20know%20more%20about%20the%20Nest." target="_blank" rel="noopener" style="color: #ead7c3;">Chat with us on WhatsApp</a></p><p style="margin: 0;"><a href="mailto:info@hannahsnest.org" style="color: #ead7c3;">info@hannahsnest.org</a></p><p style="margin: 6px 0 0; display: flex; gap: 10px;"><a href="https://www.instagram.com/hannahsnestorg/" target="_blank" rel="noopener" aria-label="Follow Hannah’s Nest on Instagram" title="Follow us on Instagram" style="width: 44px; height: 44px; border-radius: 50%; background: #4a372d; display: inline-flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ead7c3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect><circle cx="12" cy="12" r="4.3"></circle><circle cx="17.6" cy="6.4" r="1.1" fill="#ead7c3" stroke="none"></circle></svg></a><a href="https://www.facebook.com/1465040463359070" target="_blank" rel="noopener" aria-label="Follow Hannah’s Nest on Facebook" title="Follow us on Facebook" style="width: 44px; height: 44px; border-radius: 50%; background: #4a372d; display: inline-flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="#ead7c3" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1z"></path></svg></a><a href="https://www.linkedin.com/company/147008050" target="_blank" rel="noopener" aria-label="Follow Hannah’s Nest on LinkedIn" title="Follow us on LinkedIn" style="width: 44px; height: 44px; border-radius: 50%; background: #4a372d; display: inline-flex; align-items: center; justify-content: center;"><svg width="19" height="19" viewBox="0 0 24 24" fill="#ead7c3" aria-hidden="true"><path d="M5.3 8.6h3.2V20H5.3V8.6zM6.9 3.5a1.9 1.9 0 1 1 0 3.8 1.9 1.9 0 0 1 0-3.8zM10.6 8.6h3.1v1.6h.1c.4-.8 1.5-1.8 3.1-1.8 3.3 0 3.9 2.2 3.9 5V20h-3.2v-5.9c0-1.4 0-3.2-2-3.2s-2.2 1.5-2.2 3.1v6h-3.2V8.6z"></path></svg></a></p></div>
 </div>
@@ -507,7 +517,7 @@ calmPressed: on ? 'true' : 'false',
 calmLabel: on ? 'Stop the calm sound' : 'Play a calm, soothing sound',
 calmText: on ? 'Stop sound' : 'Play calm sound',
 calmWave: on ? 'M15 9c1.2 1.6 1.2 4.4 0 6M18 6.5c2.4 3 2.4 8 0 11' : 'M15.5 10.5l4 4M19.5 10.5l-4 4',
-calmStyle: 'position: fixed; left: 20px; bottom: 20px; z-index: 60; display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 10px 18px 10px 14px; border-radius: 999px; border: 1.5px solid ' + (on ? '#8f4a33' : '#c2ae9c') + '; background: ' + (on ? '#8f4a33' : 'rgba(251,246,239,.94)') + '; color: ' + (on ? '#fbf6ef' : '#3a2a22') + '; box-shadow: 0 10px 28px rgba(58,42,34,.18); cursor: pointer; font-family: inherit;',
+calmStyle: 'position: relative; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border-radius: 999px; border: 1.5px solid ' + (on ? '#8f4a33' : '#c2ae9c') + '; background: ' + (on ? '#8f4a33' : 'rgba(251,246,239,.94)') + '; color: ' + (on ? '#fbf6ef' : '#3a2a22') + '; box-shadow: 0 10px 28px rgba(58,42,34,.18); cursor: pointer; font-family: inherit;',
 calmToggle: () => { if (this.state.calmOn) { this.calmStop(); this.setState({ calmOn: false }); try { window.localStorage.setItem('hn-calm', '0'); } catch (e) {} } else { this.calmStart(); this.setState({ calmOn: true }); try { window.localStorage.setItem('hn-calm', '1'); } catch (e) {} } }
 };
 }
@@ -702,7 +712,7 @@ liveStart() { if (this._liveAsked) { return; } this._liveAsked = true; try { fet
 liveVals() { const n = this.state.liveN || 0; const st = this.state.stats || {}; const req = Math.max(Number(st.requested) || 0, Number((this.state.counts || {}).joins) || 0); const inn = Number(st.joined) || 0; const from = Number(st.showFrom) || 20; return { liveShow: n >= 2, liveN: n, statShow: req >= from, statReq: req, statIn: inn, statInShow: inn > 0 }; }
 countsLoad() { const run = () => { try { fetch('https://yqyrgfeqrjsnqiiaiund.supabase.co/rest/v1/rpc/site_counts', { method: 'POST', headers: { apikey: 'sb_publishable_0fynq_pLOxSATkmL0fxMMg_r_oTXaaN', 'Content-Type': 'application/json' }, body: '{}' }).then((r) => (r.ok ? r.json() : null)).then((d) => { if (d && typeof d === 'object') { const first = !this.state.counts; this.setState({ counts: d }); if (first) { this.countUp(); } } }).catch(() => {}); } catch (eC) {} }; run(); this._countsT = setInterval(run, 60000); }
 countUp() { const t0 = Date.now(); const step = () => { const f = Math.min(1, (Date.now() - t0) / 1600); this.setState({ tickF: 1 - Math.pow(1 - f, 3) }); if (f < 1) { this._cuRaf = requestAnimationFrame(step); } }; this._cuRaf = requestAnimationFrame(step); }
-tickVals() { const c = this.state.counts || {}; const st = this.state.stats || {}; const f = this.state.tickF == null ? 1 : this.state.tickF; const fmt = (n) => Math.round(n * f).toLocaleString('en-NG'); const wait = Math.max(Number(c.joins) || 0, Number(st.requested) || 0); const items = []; const live = this.state.liveN || 0;  if (c.visitors > 0) { items.push({ icon: '👀', n: fmt(c.visitors), label: 'sisters have visited the Nest' }); } if (c.today > 0) { items.push({ icon: '☀️', n: fmt(c.today), label: 'visited today' }); } if (wait > 0) { items.push({ icon: '🌸', n: fmt(wait), label: 'sisters have asked to join' }); } if (c.well > 0) { items.push({ icon: '💧', n: fmt(c.well), label: 'visits to The Well' }); } let list = items.slice(); while (list.length && list.length < 6) { list = list.concat(items); } return { tickShow: items.length > 0, tick: list.concat(list), tickSummary: 'Hannah’s Nest so far: ' + items.map((x) => x.n + ' ' + x.label).join(', ') + '.', tickPaused: !!this.state.tickPaused, tickTrackStyle: this.state.tickPaused ? 'animation-play-state: paused;' : '', tickBtn: this.state.tickPaused ? 'Play' : 'Pause', tickBtnLabel: this.state.tickPaused ? 'Play the numbers strip' : 'Pause the numbers strip', tickToggle: () => this.setState({ tickPaused: !this.state.tickPaused }) }; }
+tickVals() { const c = this.state.counts || {}; const st = this.state.stats || {}; const f = this.state.tickF == null ? 1 : this.state.tickF; const fmt = (n) => Math.round(n * f).toLocaleString('en-NG'); const wait = Math.max(Number(c.joins) || 0, Number(st.requested) || 0); const items = []; const live = this.state.liveN || 0;  if (c.visitors > 0) { items.push({ icon: '👀', n: fmt(c.visitors), label: 'sisters have visited the Nest' }); } if (c.today > 0) { items.push({ icon: '☀️', n: fmt(c.today), label: 'visited today' }); } if (wait > 0) { items.push({ icon: '🌸', n: fmt(wait), label: 'sisters have asked to join' }); } if (c.well > 0) { items.push({ icon: '💧', n: fmt(c.well), label: 'visits to The Well' }); } if (items.length) { items.unshift({ icon: '', n: 'Free', label: 'to join · Private by design · Nicknames welcome' }); } let list = items.slice(); while (list.length && list.length < 6) { list = list.concat(items); } return { noTick: items.length === 0, tickShow: items.length > 0, tick: list.concat(list), tickSummary: 'Hannah’s Nest so far: ' + items.map((x) => x.n + ' ' + x.label).join(', ') + '.', tickPaused: !!this.state.tickPaused, tickTrackStyle: this.state.tickPaused ? 'animation-play-state: paused;' : '', tickBtn: this.state.tickPaused ? 'Play' : 'Pause', tickBtnLabel: this.state.tickPaused ? 'Play the numbers strip' : 'Pause the numbers strip', tickToggle: () => this.setState({ tickPaused: !this.state.tickPaused }) }; }
 componentWillUnmount() {
 if (this._countsT) { clearInterval(this._countsT); } if (this._cuRaf) { cancelAnimationFrame(this._cuRaf); }
 if (this._wordScroll) { document.removeEventListener('scroll', this._wordScroll, true); }
@@ -825,5 +835,5 @@ return { ...this.tickVals(), ...this.liveVals(), ...this.mqVals(), igPosts: igPo
 }
 }
 </script>
-<script>(function(){try{var h=location.hostname;if(h!=='hannahsnest.org'&&h!=='www.hannahsnest.org')return;var U='https://yqyrgfeqrjsnqiiaiund.supabase.co/rest/v1/site_events',K='sb_publishable_0fynq_pLOxSATkmL0fxMMg_r_oTXaaN';var ua=navigator.userAgent||'';if(/bot|crawl|spider|preview|headless|lighthouse/i.test(ua))return;function vid(){var v=null;try{v=localStorage.getItem('hn-vid');if(!v){v='v'+Math.random().toString(36).slice(2,12)+Date.now().toString(36);localStorage.setItem('hn-vid',v);}}catch(e){v=null}return v}function log(k){try{fetch(U,{method:'POST',keepalive:true,headers:{apikey:K,'Content-Type':'application/json',Prefer:'return=minimal'},body:JSON.stringify({kind:k,vid:vid()})}).catch(function(){})}catch(e){}}var d='';try{d=new Date().toLocaleDateString('en-CA',{timeZone:'Africa/Lagos'})}catch(e){d=new Date().toISOString().slice(0,10)}var last=null;try{last=localStorage.getItem('hn-vday')}catch(e){}if(last!==d){try{localStorage.setItem('hn-vday',d)}catch(e){}log('visit')}document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a'):null;if(!a)return;var x=(a.getAttribute('href')||'');if(/(^|\/)well(\.html)?([?#]|$)/i.test(x)||/Well\.dc\.html/.test(x))log('well')},true)}catch(e){}})();</script></body>
+<script>(function(){try{var h=location.hostname;if(h!=='hannahsnest.org'&&h!=='www.hannahsnest.org')return;var U='https://yqyrgfeqrjsnqiiaiund.supabase.co/rest/v1/site_events',K='sb_publishable_0fynq_pLOxSATkmL0fxMMg_r_oTXaaN';var ua=navigator.userAgent||'';if(/bot|crawl|spider|preview|headless|lighthouse/i.test(ua))return;function vid(){var v=null;try{v=localStorage.getItem('hn-vid');if(!v){v='v'+Math.random().toString(36).slice(2,12)+Date.now().toString(36);localStorage.setItem('hn-vid',v);}}catch(e){v=null}return v}function log(k){try{fetch(U,{method:'POST',keepalive:true,headers:{apikey:K,'Content-Type':'application/json',Prefer:'return=minimal'},body:JSON.stringify({kind:k,vid:vid()})}).catch(function(){})}catch(e){}}var d='';try{d=new Date().toLocaleDateString('en-CA',{timeZone:'Africa/Lagos'})}catch(e){d=new Date().toISOString().slice(0,10)}var last=null;try{last=localStorage.getItem('hn-vday')}catch(e){}if(last!==d){try{localStorage.setItem('hn-vday',d)}catch(e){}log('visit')}document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a'):null;if(!a)return;var x=(a.getAttribute('href')||'');if(/(^|\/)well(\.html)?([?#]|$)/i.test(x)||/Well\.dc\.html/.test(x))log('well')},true)}catch(e){}})();</script><script>(function(){try{document.addEventListener('click',function(e){document.querySelectorAll('details.hn-menu[open]').forEach(function(d){if(!d.contains(e.target)||(e.target.closest&&e.target.closest('.hn-sheet-link')))d.removeAttribute('open')})});document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('details.hn-menu[open]').forEach(function(d){d.removeAttribute('open')})});function chk(){var r=document.querySelector('[data-ih-root]');if(!r)return;var y=r.scrollTop,h=document.documentElement;h.classList.toggle('hn-scrolled',y>420);h.classList.toggle('hn-nearend',r.scrollHeight-y-r.clientHeight<520)}document.addEventListener('scroll',chk,{passive:true,capture:true});setTimeout(chk,800)}catch(e){}})();</script></body>
 </html>
