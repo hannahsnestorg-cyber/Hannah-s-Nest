@@ -124,6 +124,67 @@ aside[aria-label="Your word for today"]{animation:none !important}
 
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important;scroll-behavior:auto!important}}
 @media (max-width: 700px){nav a{padding-top:10px;padding-bottom:10px}}
+
+.hn-nav{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600}
+.hn-links{display:flex;align-items:center;gap:2px}
+.hn-link{padding:10px 13px;border-radius:999px;color:#3a2a22;text-decoration:none}
+.hn-link:hover{background:#f3e8dc;color:#8f4a33}
+.hn-link.is-on{color:#8f4a33;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
+.hn-nav-end{display:inline-flex;align-items:center;gap:10px;margin-left:8px}
+.hn-calm{position:relative!important;left:auto!important;bottom:auto!important;width:44px;height:44px;min-height:44px!important;padding:0!important;justify-content:center;box-shadow:none!important}
+.hn-calm>span{display:none}
+.hn-menu{display:none}
+.hn-menu>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 14px;border-radius:999px;border:1.5px solid #d49a7c;background:#f3e8dc;color:#8f4a33;font-weight:700;font-size:14px}
+.hn-menu>summary::-webkit-details-marker{display:none}
+.hn-sheet{position:absolute;left:0;right:0;top:100%;z-index:80;background:#fbf6ef;border-bottom:1px solid #e8dacb;box-shadow:0 22px 40px rgba(58,42,34,.16);padding:8px 16px 18px;display:flex;flex-direction:column;animation:hn-sheet-in .2s ease-out}
+@keyframes hn-sheet-in{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.hn-sheet-link{display:block;padding:15px 8px;border-bottom:1px solid #efe3d6;font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:500;color:#3a2a22;text-decoration:none}
+.hn-sheet-link.is-on{color:#8f4a33}
+.hn-sheet-calm{margin-top:14px;align-self:flex-start;border:1.5px solid #d49a7c;background:#f3e8dc;color:#8f4a33;border-radius:999px;padding:11px 18px;font:inherit;font-size:15px;font-weight:700;cursor:pointer}
+.hn-help-btn{min-height:48px!important;padding:10px 16px 10px 12px!important;font-size:14px!important;opacity:0;pointer-events:none;transform:translateY(14px);transition:opacity .25s,transform .25s}
+html.hn-scrolled:not(.hn-nearend) .hn-help-btn,.hn-help-btn[aria-expanded="true"]{opacity:1;pointer-events:auto;transform:none}
+header>div{position:relative}
+@media (max-width: 1040px){.hn-links{display:none}.hn-menu{display:block}}
+@media (max-width: 520px){
+ header>div{padding:12px 16px!important;flex-wrap:nowrap!important}
+ header>div>a img{height:42px!important}
+ .hn-nav-end{gap:8px;margin-left:0}
+ .hn-nav-end .hn-calm{display:none!important}
+ .hn-nav-end .ih-btn{padding:10px 16px!important;font-size:14px;white-space:nowrap}
+ .hn-menu>summary span{display:none}
+ .hn-menu>summary{padding:0 11px}
+ .hn-help-btn>span{display:none}.hn-help-btn{padding:12px!important}
+}
+
+.hn-foot{flex:1 1 420px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 24px;font-size:15px}
+.hn-foot>div{display:flex;flex-direction:column;gap:9px}
+.hn-foot-h{margin:0 0 2px;font-size:12px;letter-spacing:.18em;font-weight:700;color:#d49a7c;text-transform:uppercase}
+.hn-foot a{color:#fbf6ef;text-decoration:none}
+.hn-foot a:hover{text-decoration:underline}
+@media (max-width:600px){.hn-foot{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.hn-wrap{max-width:1120px;margin:0 auto}
+.hn-who{background:#f3e8dc;padding:88px 24px}
+.hn-taste{background:#fbf6ef;padding:88px 24px}
+.hn-kick{margin:0 0 12px;font-size:13px;line-height:16px;letter-spacing:.2em;font-weight:700;color:#7a5a2a}
+.hn-h2{margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(34px,4.4vw,52px);line-height:1.05;color:#8f4a33}
+.hn-h2 span{font-style:italic;color:#5f7a5c}
+.hn-lead{margin:16px 0 0;max-width:640px;font-size:18px;line-height:29px;color:#3a2a22}
+.hn-grid{margin-top:34px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.hn-grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.hn-card{background:#fbf6ef;border:1px solid #e8dacb;border-radius:18px;padding:20px 20px 18px}
+.hn-taste .hn-card{background:#f3e8dc;border-color:#ead7c3}
+.hn-card h3{margin:0 0 6px;font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:24px;line-height:1.15;color:#8f4a33}
+.hn-card p{margin:0;font-size:15px;line-height:23px;color:#3a2a22}
+.hn-card-link{display:flex;flex-direction:column;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.hn-card-link:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(58,42,34,.12)}
+.hn-card-kick{margin:0 0 8px!important;font-size:12px!important;letter-spacing:.18em;font-weight:700;color:#7a5a2a!important}
+.hn-go{margin-top:14px;font-weight:700;font-size:15px;color:#8f4a33}
+.hn-tabs{display:flex;justify-content:center;gap:8px;padding:18px 16px 0;background:#fbf6ef}
+.hn-tab{padding:11px 22px;border-radius:999px;border:1.5px solid #d49a7c;color:#8f4a33;text-decoration:none;font-weight:700;font-size:15px;background:#fbf6ef}
+.hn-tab.is-on{background:#8f4a33;color:#fbf6ef;border-color:#8f4a33}
+.hn-faith{background:#f3e8dc;padding:72px 24px}
+@media (max-width:600px){.hn-who,.hn-taste{padding:64px 18px}.hn-grid{grid-template-columns:1fr}}
 </style>
 </helmet>
 <div data-ih-root="1" style="width: 100%; height: 100vh; height: 100dvh; overflow-y: auto; overflow-x: hidden; scroll-behavior: smooth; overscroll-behavior: contain; background: #fbf6ef; color: #3a2a22; font-family: 'DM Sans', Helvetica, Arial, sans-serif; font-size: 17px; line-height: 28px;">
@@ -137,7 +198,7 @@ aside[aria-label="Your word for today"]{animation:none !important}
 <p style="margin: 6px 0 0; font-size: 14px;">Still need a person? <a href="https://wa.me/2348065114503?text=Hello%20Hannah%E2%80%99s%20Nest%2C%20I%20have%20a%20question." target="_blank" rel="noopener" style="color: #8f4a33; font-weight: 700;">Message a host</a></p>
 <p style="margin: 0; font-size: 12.5px; line-height: 18px; color: #6a5a4e;">Our helper gives general answers only, never medical advice.</p>
 </div></div></sc-if>
-<button type="button" class="hn-calm" onClick="{{ calmToggle }}" aria-pressed="{{ calmPressed }}" aria-label="{{ calmLabel }}" title="{{ calmLabel }}" style="{{ calmStyle }}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" style="flex-shrink: 0;"><path d="M4 10v4h3l4 4V6L7 10H4z" fill="currentColor"></path><path d="{{ calmWave }}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg><span style="font-size: 14px; font-weight: 700;">{{ calmText }}</span></button>
+
 
 <!-- Top note -->
 <div style="background: #8f4a33; color: #fbf6ef; text-align: center; padding: 10px 16px; font-size: 14px; line-height: 20px; letter-spacing: 0.02em;">Free to join · Private by design · Nicknames welcome</div>
@@ -146,17 +207,9 @@ aside[aria-label="Your word for today"]{animation:none !important}
 <header style="background: #fbf6ef; border-bottom: 1px solid #e8dacb;">
 <div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
 <a href="index.html" aria-label="Hannah’s Nest home" style="display: flex; align-items: center;"><img src="/img/ef040b834e6bfcfebbb2eb36d998f9dd.svg" alt="Hannah’s Nest" style="height: 54px; width: auto; display: block;"></a>
-<nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 22px; font-size: 15px; font-weight: 500;">
-<a href="index.html" style="color: #3a2a22; text-decoration: none;">Home</a>
-<a href="nest.html" style="color: #3a2a22; text-decoration: none;">The Nest</a>
-<a href="daily.html" aria-current="page" style="color: #8f4a33; font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px;">Daily</a>
-<a href="pray.html" style="color: #3a2a22; text-decoration: none;">Live Fully</a>
-<a href="learn.html" style="color: #3a2a22; text-decoration: none;">Learn</a>
-<a href="well.html" style="display: inline-flex; align-items: center; gap: 8px; background: #f3e8dc; color: #8f4a33; text-decoration: none; padding: 11px 18px; border-radius: 999px; border: 1.5px solid #d49a7c; font-weight: 700;"><svg aria-hidden="true" width="14" height="18" viewBox="0 0 14 18" fill="none"><path d="M7 1C7 1 1 8 1 11.5A6 6 0 0 0 13 11.5C13 8 7 1 7 1Z" stroke="#8f4a33" stroke-width="1.8" stroke-linejoin="round"/></svg>The Well</a>
-<a onClick="{{ go.join }}" href="index.html#join" class="ih-btn" style="background: #8f4a33; color: #fbf6ef; text-decoration: none; padding: 12px 24px; border-radius: 999px; font-weight: 600;">Come inside</a>
-</nav>
+<nav aria-label="Main" class="hn-nav"><div class="hn-links"><a href="index.html" class="hn-link">Home</a><a href="nest.html" class="hn-link">The Nest</a><a href="daily.html" class="hn-link is-on" aria-current="page">Daily</a><a href="well.html" class="hn-link">The Well</a><a href="pray.html" class="hn-link">Live Fully</a><a href="learn.html" class="hn-link">Learn</a></div><span class="hn-nav-end"><button type="button" class="hn-calm" onClick="{{ calmToggle }}" aria-pressed="{{ calmPressed }}" aria-label="{{ calmLabel }}" title="{{ calmLabel }}" style="{{ calmStyle }}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" style="flex-shrink: 0;"><path d="M4 10v4h3l4 4V6L7 10H4z" fill="currentColor"></path><path d="{{ calmWave }}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg><span style="font-size: 14px; font-weight: 700;">{{ calmText }}</span></button><a onClick="{{ go.join }}" href="index.html#join" class="ih-btn" style="background: #8f4a33; color: #fbf6ef; text-decoration: none; padding: 12px 24px; border-radius: 999px; font-weight: 600;">Come inside</a><details class="hn-menu"><summary aria-label="Menu"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Menu</span></summary><div class="hn-sheet"><a href="index.html" class="hn-sheet-link">Home</a><a href="nest.html" class="hn-sheet-link">The Nest</a><a href="daily.html" class="hn-sheet-link is-on" aria-current="page">Daily</a><a href="well.html" class="hn-sheet-link">The Well</a><a href="pray.html" class="hn-sheet-link">Live Fully</a><a href="learn.html" class="hn-sheet-link">Learn</a><button type="button" class="hn-sheet-calm" onClick="{{ calmToggle }}" aria-pressed="{{ calmPressed }}">{{ calmLabel }}</button></div></details></span></nav>
 </div>
-</header>
+</header><div class="hn-tabs" role="navigation" aria-label="Daily"><a href="daily.html" class="hn-tab is-on" aria-current="page">Check-in</a><a href="journal.html" class="hn-tab">My journal</a></div>
 
 <!-- Page intro -->
 <section style="padding: 84px 24px 76px; background: #f3e8dc;">
@@ -274,19 +327,10 @@ aside[aria-label="Your word for today"]{animation:none !important}
 <footer style="background: #3a2a22; color: #fbf6ef;">
 <div style="max-width: 1240px; margin: 0 auto; padding: 48px 24px 28px; display: flex; flex-wrap: wrap; gap: 28px 48px; justify-content: space-between; align-items: flex-start;">
 <div style="flex: 1 1 260px; display: flex; align-items: center; gap: 14px;"><img src="/img/bae077bc1998ed64b2dfd52d6799b8aa.svg" alt="" style="width: 52px; height: 52px; border-radius: 12px; display: block;"><div><p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 30px; line-height: 1; font-weight: 600;">Hannah’s Nest</p><p style="margin: 6px 0 0; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 18px; line-height: 22px; color: #ead7c3;">“For this child I prayed.” 1 Samuel 1:27</p></div></div>
-<nav aria-label="Footer" style="flex: 1 1 300px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 24px; font-size: 15px;">
-<a onClick="{{ go.top }}" href="index.html" style="color: #fbf6ef; text-decoration: none;">Home</a>
-<a onClick="{{ go.inside }}" href="nest.html" style="color: #fbf6ef; text-decoration: none;">The Nest</a>
-<a onClick="{{ jumpTo }}" href="#checkin" style="color: #fbf6ef; text-decoration: none;">Daily check-in</a>
-<a href="journal.html" style="color: #fbf6ef; text-decoration: none;">My journal</a>
-<a onClick="{{ go.pray }}" href="pray.html" style="color: #fbf6ef; text-decoration: none;">Live Fully</a>
-<a href="well.html" style="color: #fbf6ef; text-decoration: none;">The Well</a>
-<a href="https://tally.so/r/rDO4Vo" target="_blank" rel="noopener" style="color: #ead7c3; text-decoration: none; font-weight: 700;">🌸 Leave a Petal</a>
-<a onClick="{{ go.learn }}" href="learn.html" style="color: #fbf6ef; text-decoration: none;">Learn</a>
-<a onClick="{{ go.heavy }}" href="pray.html" style="color: #fbf6ef; text-decoration: none;">Heavy-day support</a>
-<a href="/privacy" style="color: #fbf6ef; text-decoration: none;">Privacy</a>
-<a href="/membership-terms" style="color: #fbf6ef; text-decoration: none;">Membership terms</a>
-<a onClick="{{ go.join }}" href="index.html#join" style="color: #fbf6ef; text-decoration: none;">Come inside</a>
+<nav aria-label="Footer" class="hn-foot">
+<div><p class="hn-foot-h">Explore</p><a href="index.html">Home</a><a href="nest.html">The Nest</a><a href="daily.html">Daily</a><a href="well.html">The Well</a><a href="pray.html">Live Fully</a><a href="learn.html">Learn</a></div>
+<div><p class="hn-foot-h">Support</p><a href="learn.html#ask">Ask or request prayer</a><a href="pray.html#heavy">Heavy-day support</a><a href="https://tally.so/r/rDO4Vo" target="_blank" rel="noopener">🌸 Leave a Petal</a></div>
+<div><p class="hn-foot-h">About</p><a href="index.html#join">Come inside</a><a href="/privacy">Privacy</a><a href="/membership-terms">Membership terms</a></div>
 </nav>
 <div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 8px; font-size: 15px;"><p style="margin: 0; color: #d49a7c; font-size: 13px; letter-spacing: 0.2em; font-weight: 700;">FIND US &amp; FOLLOW US</p><p style="margin: 0;"><a href="https://wa.me/2348065114503?text=Hello%20Hannah%E2%80%99s%20Nest%2C%20I%E2%80%99d%20like%20to%20know%20more%20about%20the%20Nest." target="_blank" rel="noopener" style="color: #ead7c3;">Chat with us on WhatsApp</a></p><p style="margin: 0;"><a href="mailto:info@hannahsnest.org" style="color: #ead7c3;">info@hannahsnest.org</a></p><p style="margin: 6px 0 0; display: flex; gap: 10px;"><a href="https://www.instagram.com/hannahsnestorg/" target="_blank" rel="noopener" aria-label="Follow Hannah’s Nest on Instagram" title="Follow us on Instagram" style="width: 44px; height: 44px; border-radius: 50%; background: #4a372d; display: inline-flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ead7c3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect><circle cx="12" cy="12" r="4.3"></circle><circle cx="17.6" cy="6.4" r="1.1" fill="#ead7c3" stroke="none"></circle></svg></a><a href="https://www.facebook.com/1465040463359070" target="_blank" rel="noopener" aria-label="Follow Hannah’s Nest on Facebook" title="Follow us on Facebook" style="width: 44px; height: 44px; border-radius: 50%; background: #4a372d; display: inline-flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="#ead7c3" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1z"></path></svg></a><a href="https://www.linkedin.com/company/147008050" target="_blank" rel="noopener" aria-label="Follow Hannah’s Nest on LinkedIn" title="Follow us on LinkedIn" style="width: 44px; height: 44px; border-radius: 50%; background: #4a372d; display: inline-flex; align-items: center; justify-content: center;"><svg width="19" height="19" viewBox="0 0 24 24" fill="#ead7c3" aria-hidden="true"><path d="M5.3 8.6h3.2V20H5.3V8.6zM6.9 3.5a1.9 1.9 0 1 1 0 3.8 1.9 1.9 0 0 1 0-3.8zM10.6 8.6h3.1v1.6h.1c.4-.8 1.5-1.8 3.1-1.8 3.3 0 3.9 2.2 3.9 5V20h-3.2v-5.9c0-1.4 0-3.2-2-3.2s-2.2 1.5-2.2 3.1v6h-3.2V8.6z"></path></svg></a></p></div>
 </div>
@@ -388,7 +432,7 @@ calmPressed: on ? 'true' : 'false',
 calmLabel: on ? 'Stop the calm sound' : 'Play a calm, soothing sound',
 calmText: on ? 'Stop sound' : 'Play calm sound',
 calmWave: on ? 'M15 9c1.2 1.6 1.2 4.4 0 6M18 6.5c2.4 3 2.4 8 0 11' : 'M15.5 10.5l4 4M19.5 10.5l-4 4',
-calmStyle: 'position: fixed; left: 20px; bottom: 20px; z-index: 60; display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 10px 18px 10px 14px; border-radius: 999px; border: 1.5px solid ' + (on ? '#8f4a33' : '#c2ae9c') + '; background: ' + (on ? '#8f4a33' : 'rgba(251,246,239,.94)') + '; color: ' + (on ? '#fbf6ef' : '#3a2a22') + '; box-shadow: 0 10px 28px rgba(58,42,34,.18); cursor: pointer; font-family: inherit;',
+calmStyle: 'position: relative; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border-radius: 999px; border: 1.5px solid ' + (on ? '#8f4a33' : '#c2ae9c') + '; background: ' + (on ? '#8f4a33' : 'rgba(251,246,239,.94)') + '; color: ' + (on ? '#fbf6ef' : '#3a2a22') + '; box-shadow: 0 10px 28px rgba(58,42,34,.18); cursor: pointer; font-family: inherit;',
 calmToggle: () => { if (this.state.calmOn) { this.calmStop(); this.setState({ calmOn: false }); try { window.localStorage.setItem('hn-calm', '0'); } catch (e) {} } else { this.calmStart(); this.setState({ calmOn: true }); try { window.localStorage.setItem('hn-calm', '1'); } catch (e) {} } }
 };
 }
@@ -793,5 +837,5 @@ return { greet: (() => { const h = new Date().getHours(); return h < 12 ? 'Good 
 }
 }
 </script>
-<script>(function(){try{var h=location.hostname;if(h!=='hannahsnest.org'&&h!=='www.hannahsnest.org')return;var U='https://yqyrgfeqrjsnqiiaiund.supabase.co/rest/v1/site_events',K='sb_publishable_0fynq_pLOxSATkmL0fxMMg_r_oTXaaN';var ua=navigator.userAgent||'';if(/bot|crawl|spider|preview|headless|lighthouse/i.test(ua))return;function vid(){var v=null;try{v=localStorage.getItem('hn-vid');if(!v){v='v'+Math.random().toString(36).slice(2,12)+Date.now().toString(36);localStorage.setItem('hn-vid',v);}}catch(e){v=null}return v}function log(k){try{fetch(U,{method:'POST',keepalive:true,headers:{apikey:K,'Content-Type':'application/json',Prefer:'return=minimal'},body:JSON.stringify({kind:k,vid:vid()})}).catch(function(){})}catch(e){}}var d='';try{d=new Date().toLocaleDateString('en-CA',{timeZone:'Africa/Lagos'})}catch(e){d=new Date().toISOString().slice(0,10)}var last=null;try{last=localStorage.getItem('hn-vday')}catch(e){}if(last!==d){try{localStorage.setItem('hn-vday',d)}catch(e){}log('visit')}document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a'):null;if(!a)return;var x=(a.getAttribute('href')||'');if(/(^|\/)well(\.html)?([?#]|$)/i.test(x)||/Well\.dc\.html/.test(x))log('well')},true)}catch(e){}})();</script></body>
+<script>(function(){try{var h=location.hostname;if(h!=='hannahsnest.org'&&h!=='www.hannahsnest.org')return;var U='https://yqyrgfeqrjsnqiiaiund.supabase.co/rest/v1/site_events',K='sb_publishable_0fynq_pLOxSATkmL0fxMMg_r_oTXaaN';var ua=navigator.userAgent||'';if(/bot|crawl|spider|preview|headless|lighthouse/i.test(ua))return;function vid(){var v=null;try{v=localStorage.getItem('hn-vid');if(!v){v='v'+Math.random().toString(36).slice(2,12)+Date.now().toString(36);localStorage.setItem('hn-vid',v);}}catch(e){v=null}return v}function log(k){try{fetch(U,{method:'POST',keepalive:true,headers:{apikey:K,'Content-Type':'application/json',Prefer:'return=minimal'},body:JSON.stringify({kind:k,vid:vid()})}).catch(function(){})}catch(e){}}var d='';try{d=new Date().toLocaleDateString('en-CA',{timeZone:'Africa/Lagos'})}catch(e){d=new Date().toISOString().slice(0,10)}var last=null;try{last=localStorage.getItem('hn-vday')}catch(e){}if(last!==d){try{localStorage.setItem('hn-vday',d)}catch(e){}log('visit')}document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a'):null;if(!a)return;var x=(a.getAttribute('href')||'');if(/(^|\/)well(\.html)?([?#]|$)/i.test(x)||/Well\.dc\.html/.test(x))log('well')},true)}catch(e){}})();</script><script>(function(){try{document.addEventListener('click',function(e){document.querySelectorAll('details.hn-menu[open]').forEach(function(d){if(!d.contains(e.target)||(e.target.closest&&e.target.closest('.hn-sheet-link')))d.removeAttribute('open')})});document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('details.hn-menu[open]').forEach(function(d){d.removeAttribute('open')})});function chk(){var r=document.querySelector('[data-ih-root]');if(!r)return;var y=r.scrollTop,h=document.documentElement;h.classList.toggle('hn-scrolled',y>420);h.classList.toggle('hn-nearend',r.scrollHeight-y-r.clientHeight<520)}document.addEventListener('scroll',chk,{passive:true,capture:true});setTimeout(chk,800)}catch(e){}})();</script></body>
 </html>
